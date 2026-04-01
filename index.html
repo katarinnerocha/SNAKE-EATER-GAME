@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNAKE EATER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MENU PRINCIPAL, BOTÃO PARA INICIAR O JOGO - MAIN MENU, PLAY BUTTON -->
+    <div id="main-menu" class="screen">
+        <h1>SNAKE EATER</h1>
+        <div class="button-container">
+            <button onclick="startGame()">PLAY</button>
+        </div>
+    </div>
+
+    <!-- CENA DO JOGO, ONDE A COBRA SE MOVE E MARCAÇÃO DE PONTOS 
+     - GAME SCENE, WHERE THE SNAKE MOVES AND SCORE IS DISPLAYED -->
+    <div id="game-scene" class="screen hidden">
+        <div class="game-header">
+            <span>SCORE: <span id="score">0</span></span>
+        </div>
+
+        <div id="message" class="hidden">COLLECT THE RED SQUARES TO EARN POINTS</div>
+        
+        <canvas id="snake-canvas" width="700" height="700"></canvas>
+
+        <!-- BOTÃO PARA SAIR DO JOGO (VOLTA PARA O MENU PRINCIPAL)
+        - BUTTON TO EXIT THE GAME (GO BACK TO THE MAIN MENU) -->
+        <div id="close-game" class="end-game">
+            <button onclick="closeGame()">EXIT</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
